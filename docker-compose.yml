@@ -1,0 +1,23 @@
+version: '3.11'
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  postgres:
+    restart: unless-stopped
+    image: postgres:16
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+      - local_postgres_data_backups:/backups
+    env_file:
+      - .env
+    ports:
+      - "0.0.0.0:5432:5432"
+
+  redis:
+    restart: unless-stopped
+    image: redis:5.0
+    ports:
+      - "6379:6379"

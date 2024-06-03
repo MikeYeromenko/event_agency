@@ -281,3 +281,6 @@ event_agency/media/
 /temp_audio/
 /db_backups/
 /tmp/
+
+# CUSTOM
+Makefile

@@ -19,4 +19,4 @@ class Event(BaseModel):
 
     class Meta:
         ordering = ("-created", "title")
-        db_table = "vehicle"
+        db_table = "event"

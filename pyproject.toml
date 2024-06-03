@@ -15,6 +15,8 @@ redis = "^5.0.4"
 django-environ = "^0.11.2"
 django-rest-auth = "^0.9.5"
 psycopg2-binary = "^2.9.9"
+django-filter = "^24.2"
+drf-yasg = "^1.21.7"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -29,27 +31,6 @@ build-backend = "poetry.core.masonry.api"
 
 
 # === Black ===
-[tool.black]
-line-length = 120
-target-version = ['py39']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-  | dist
-  | .pytest_cache
-  | .tox
-  | docs
-  | docs_src
-  | .venv
-)/
-'''
+
 
 # === Isort ===
-[tool.isort]
-multi_line_output = 3
-include_trailing_comma = true
-force_grid_wrap = 0
-use_parentheses = true
-ensure_newline_before_comments = true
-line_length = 120
-skip_glob = [".venv/*"]
